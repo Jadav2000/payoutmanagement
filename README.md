@@ -2,6 +2,23 @@
 
 Interview-ready MERN MVP with JWT auth, RBAC, vendor management, payout workflow, and audit trail.
 
+## Quick Run (Under 5 Minutes)
+
+1. Clone repo and open two terminals.
+2. Backend setup:
+   - `cd backend`
+   - `copy .env.example .env`
+   - set `MONGO_URI` and `JWT_SECRET` in `.env`
+   - `npm install`
+   - `npm run seed`
+   - `npm run dev`
+3. Frontend setup:
+   - `cd my-project`
+   - `copy .env.example .env`
+   - `npm install`
+   - `npm run dev`
+4. Open `http://localhost:5173` and login with seeded users.
+
 ## Tech Stack
 
 - Backend: Node.js, Express, MongoDB, Mongoose
@@ -51,6 +68,13 @@ Frontend runs on Vite default (`http://localhost:5173`).
 
 - `ops@demo.com` / `ops123` (role: `OPS`)
 - `finance@demo.com` / `fin123` (role: `FINANCE`)
+
+## Assumptions
+
+- MongoDB is running locally or reachable via the configured `MONGO_URI`.
+- Node.js and npm are already installed.
+- API runs on port `5000` and frontend runs on port `5173` by default.
+- Seed command is run once before first login.
 
 ## API Overview
 
